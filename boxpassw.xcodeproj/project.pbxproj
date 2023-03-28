@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BAA01AE29CCBA17000C886A /* boxpasswApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA01AD29CCBA17000C886A /* boxpasswApp.swift */; };
+		5BAA01B029CCBA17000C886A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA01AF29CCBA17000C886A /* ContentView.swift */; };
+		5BAA01B229CCBA18000C886A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA01B129CCBA18000C886A /* Assets.xcassets */; };
+		5BAA01B529CCBA18000C886A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA01B429CCBA18000C886A /* Preview Assets.xcassets */; };
+		5BAA01B729CCBA18000C886A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA01B629CCBA18000C886A /* Persistence.swift */; };
+		5BAA01BA29CCBA18000C886A /* boxpassw.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA01B829CCBA18000C886A /* boxpassw.xcdatamodeld */; };
+		5BAA01C429CCC3E9000C886A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA01C329CCC3E9000C886A /* AuthenticationView.swift */; };
+		5BAA01C629CCE994000C886A /* UserPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA01C529CCE994000C886A /* UserPassword.swift */; };
+		5BAA01C929CCEAFE000C886A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5BAA01C829CCEAFE000C886A /* Lottie */; };
+		5BAA01CD29CCF3D5000C886A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA01CC29CCF3D5000C886A /* LoadingView.swift */; };
+		5BAA01CF29CCFA1B000C886A /* lock.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA01CE29CCFA1B000C886A /* lock.gif */; };
+		5BAA01D529CD0496000C886A /* fingerprint.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA01D429CD0496000C886A /* fingerprint.json */; };
+		5BAA01D729CDEDD5000C886A /* UserPasswordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA01D629CDEDD5000C886A /* UserPasswordListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5BAA01AA29CCBA17000C886A /* boxpassw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boxpassw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BAA01AD29CCBA17000C886A /* boxpasswApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxpasswApp.swift; sourceTree = "<group>"; };
+		5BAA01AF29CCBA17000C886A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5BAA01B129CCBA18000C886A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BAA01B429CCBA18000C886A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5BAA01B629CCBA18000C886A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		5BAA01B929CCBA18000C886A /* boxpassw.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = boxpassw.xcdatamodel; sourceTree = "<group>"; };
+		5BAA01C029CCC21D000C886A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5BAA01C329CCC3E9000C886A /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		5BAA01C529CCE994000C886A /* UserPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPassword.swift; sourceTree = "<group>"; };
+		5BAA01CC29CCF3D5000C886A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		5BAA01CE29CCFA1B000C886A /* lock.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lock.gif; sourceTree = "<group>"; };
+		5BAA01D429CD0496000C886A /* fingerprint.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fingerprint.json; sourceTree = "<group>"; };
+		5BAA01D629CDEDD5000C886A /* UserPasswordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPasswordListView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BAA01A729CCBA17000C886A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAA01C929CCEAFE000C886A /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BAA01A129CCBA17000C886A = {
+			isa = PBXGroup;
+			children = (
+				5BAA01AC29CCBA17000C886A /* boxpassw */,
+				5BAA01AB29CCBA17000C886A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BAA01AB29CCBA17000C886A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA01AA29CCBA17000C886A /* boxpassw.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BAA01AC29CCBA17000C886A /* boxpassw */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA01CE29CCFA1B000C886A /* lock.gif */,
+				5BAA01D429CD0496000C886A /* fingerprint.json */,
+				5BAA01C029CCC21D000C886A /* Info.plist */,
+				5BAA01AD29CCBA17000C886A /* boxpasswApp.swift */,
+				5BAA01AF29CCBA17000C886A /* ContentView.swift */,
+				5BAA01B129CCBA18000C886A /* Assets.xcassets */,
+				5BAA01B629CCBA18000C886A /* Persistence.swift */,
+				5BAA01B829CCBA18000C886A /* boxpassw.xcdatamodeld */,
+				5BAA01B329CCBA18000C886A /* Preview Content */,
+				5BAA01C329CCC3E9000C886A /* AuthenticationView.swift */,
+				5BAA01C529CCE994000C886A /* UserPassword.swift */,
+				5BAA01CC29CCF3D5000C886A /* LoadingView.swift */,
+				5BAA01D629CDEDD5000C886A /* UserPasswordListView.swift */,
+			);
+			path = boxpassw;
+			sourceTree = "<group>";
+		};
+		5BAA01B329CCBA18000C886A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA01B429CCBA18000C886A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BAA01A929CCBA17000C886A /* boxpassw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BAA01BD29CCBA18000C886A /* Build configuration list for PBXNativeTarget "boxpassw" */;
+			buildPhases = (
+				5BAA01A629CCBA17000C886A /* Sources */,
+				5BAA01A729CCBA17000C886A /* Frameworks */,
+				5BAA01A829CCBA17000C886A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = boxpassw;
+			packageProductDependencies = (
+				5BAA01C829CCEAFE000C886A /* Lottie */,
+			);
+			productName = boxpassw;
+			productReference = 5BAA01AA29CCBA17000C886A /* boxpassw.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BAA01A229CCBA17000C886A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					5BAA01A929CCBA17000C886A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 5BAA01A529CCBA17000C886A /* Build configuration list for PBXProject "boxpassw" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BAA01A129CCBA17000C886A;
+			packageReferences = (
+				5BAA01C729CCEAFE000C886A /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			productRefGroup = 5BAA01AB29CCBA17000C886A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BAA01A929CCBA17000C886A /* boxpassw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BAA01A829CCBA17000C886A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAA01D529CD0496000C886A /* fingerprint.json in Resources */,
+				5BAA01CF29CCFA1B000C886A /* lock.gif in Resources */,
+				5BAA01B529CCBA18000C886A /* Preview Assets.xcassets in Resources */,
+				5BAA01B229CCBA18000C886A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BAA01A629CCBA17000C886A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAA01BA29CCBA18000C886A /* boxpassw.xcdatamodeld in Sources */,
+				5BAA01B729CCBA18000C886A /* Persistence.swift in Sources */,
+				5BAA01C429CCC3E9000C886A /* AuthenticationView.swift in Sources */,
+				5BAA01B029CCBA17000C886A /* ContentView.swift in Sources */,
+				5BAA01C629CCE994000C886A /* UserPassword.swift in Sources */,
+				5BAA01CD29CCF3D5000C886A /* LoadingView.swift in Sources */,
+				5BAA01D729CDEDD5000C886A /* UserPasswordListView.swift in Sources */,
+				5BAA01AE29CCBA17000C886A /* boxpasswApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5BAA01BB29CCBA18000C886A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5BAA01BC29CCBA18000C886A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BAA01BE29CCBA18000C886A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"boxpassw/Preview Content\"";
+				DEVELOPMENT_TEAM = 2L5XDK9RXY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = boxpassw/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use Face ID to unlock ${PRODUCT_NAME}";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rodtech.boxpassw;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BAA01BF29CCBA18000C886A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"boxpassw/Preview Content\"";
+				DEVELOPMENT_TEAM = 2L5XDK9RXY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = boxpassw/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use Face ID to unlock ${PRODUCT_NAME}";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rodtech.boxpassw;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BAA01A529CCBA17000C886A /* Build configuration list for PBXProject "boxpassw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAA01BB29CCBA18000C886A /* Debug */,
+				5BAA01BC29CCBA18000C886A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BAA01BD29CCBA18000C886A /* Build configuration list for PBXNativeTarget "boxpassw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAA01BE29CCBA18000C886A /* Debug */,
+				5BAA01BF29CCBA18000C886A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5BAA01C729CCEAFE000C886A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5BAA01C829CCEAFE000C886A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5BAA01C729CCEAFE000C886A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		5BAA01B829CCBA18000C886A /* boxpassw.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5BAA01B929CCBA18000C886A /* boxpassw.xcdatamodel */,
+			);
+			currentVersion = 5BAA01B929CCBA18000C886A /* boxpassw.xcdatamodel */;
+			path = boxpassw.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5BAA01A229CCBA17000C886A /* Project object */;
+}
