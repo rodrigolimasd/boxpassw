@@ -13,18 +13,26 @@ struct LoadingView: View {
     
     var body: some View {
         VStack {
-            LottieView()
-            Text("boxPass")
-                .font(.title)
-                .bold()
-        }.onAppear {
+            if !isActive {
+                Text("boxPass")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.black)
+                    .bold()
+                LottieView()
+                    .frame(maxWidth: 400, maxHeight: 400)
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.cyan)
+        .ignoresSafeArea()
+        .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.isActive = true
             }
         }.fullScreenCover(isPresented: $isActive, content: {
             AuthenticationView()
         })
-        .background(Color.cyan)
     }
 }
 
