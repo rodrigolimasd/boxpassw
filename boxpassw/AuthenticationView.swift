@@ -20,16 +20,17 @@ struct AuthenticationView: View {
                     .bold()
                     .padding()
                 
-                Button("Authenticate"){
-                    authenticate()
-                }
-                .padding()
-                .frame(maxWidth: UIScreen.main.bounds.width * 0.8)
-                .background(Color.black)
-                .font(.system(size: 23, weight: .bold))
-                .foregroundColor(.white)
-                .cornerRadius(10)
+                Image(systemName: "lock.shield")
+                    .font(.system(size: 100))
+                    .padding(.bottom, 50)
+                
+                Button(action: authenticate, label: {
+                    Text("Touch to Unlock")
+                        .font(.title)
+                })
             }
+            .padding()
+            
         }.fullScreenCover(isPresented: $isUnlocked, content: { UserPasswordListView() })
             
     }
@@ -45,9 +46,12 @@ struct AuthenticationView: View {
                 
                 if success {
                     self.isUnlocked = true
+                } else {
+                    print(error?.localizedDescription ?? "Failed to authenticate")
                 }
             }
-            
+        } else {
+            print(error?.localizedDescription ?? "Can't evaluate policy")
         }
     }
 }
