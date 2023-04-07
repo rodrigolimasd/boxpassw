@@ -31,7 +31,9 @@ struct AuthenticationView: View {
             }
             .padding()
             
-        }.fullScreenCover(isPresented: $isUnlocked, content: { UserPasswordListView() })
+        }.fullScreenCover(isPresented: $isUnlocked, content: {
+            PasswordListView()
+        })
             
     }
     
