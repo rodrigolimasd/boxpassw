@@ -8,36 +8,47 @@
 import SwiftUI
 
 struct PasswordListRowView: View {
-    var password: PasswordData
+    var title: String
+    var subtitle: String
+    var hided: String
+    var showHided: Bool
     var isSelected: Bool
     var onSelect: (() -> Void)?
     
     var body: some View {
         HStack {
-            Text(password.domain!)
-                .font(.headline)
-                .foregroundColor(.primary)
+            VStack(alignment: .leading) {
+                Text(title)
+                    .font(.title)
+                    .foregroundColor(.primary)
+                HStack {
+                    Text(subtitle)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                    Text(hided)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .opacity(showHided && isSelected ? 1 : 0)
+                        
+                }
+            }
             Spacer()
             if isSelected {
                 Image(systemName: "checkmark.circle.fill")
                     .foregroundColor(.accentColor)
             }
+        }.onTapGesture {
+            onSelect?()
         }
     }
 }
 
-//struct PasswordListRowView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PasswordListRowView(password: getPasswordData(), isSelected: true)
-//        {
-//
-//        }
-//    }
-//    private static func getPasswordData() -> PasswordData {
-//        let pass = PasswordData()
-//        pass.domain = "domain-test"
-//        return pass
-//    }
-//}
+struct PasswordListRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        PasswordListRowView(title:"title",subtitle: "subtitle", hided: "pass", showHided: true, isSelected: true) {
+            
+        }
+    }
+}
 
 

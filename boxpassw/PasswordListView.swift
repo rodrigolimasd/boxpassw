@@ -18,6 +18,15 @@ struct PasswordListView: View {
     @State private var searchText = ""
     @State private var isShowAddPasswordView = false
     @State private var selectedPasswords = Set<PasswordData>()
+    @State private var isShowPasswords = false
+    
+    func filterPasswords() -> [PasswordData] {
+        return passwords.filter {
+            ($0.domain?.lowercased().contains(searchText.lowercased()) == true ||
+            $0.username?.lowercased().contains(searchText.lowercased()) == true) ||
+            searchText.isEmpty
+        }
+    }
     
     var body: some View {
         NavigationView{
@@ -25,8 +34,8 @@ struct PasswordListView: View {
                 SearchBarView(searchText: $searchText)
                 
                 List {
-                    ForEach(passwords) { password in
-                        PasswordListRowView(password: password, isSelected: self.selectedPasswords.contains(password))
+                    ForEach(filterPasswords()) { password in
+                        PasswordListRowView(title: password.domain!, subtitle: password.username!, hided: password.password!, showHided: isShowPasswords, isSelected: self.selectedPasswords.contains(password))
                         {
                             if self.selectedPasswords.contains(password) {
                                 selectedPasswords.remove(password)
@@ -45,11 +54,20 @@ struct PasswordListView: View {
             .navigationBarTitle("My Passwords")
             .navigationBarItems(
                  trailing:
-                     Button(action: {
-                         self.isShowAddPasswordView = true
-                     }) {
-                         Image(systemName: "plus")
-                     }
+                    HStack {
+                        Button(action: {
+                            self.isShowAddPasswordView = true
+                        }) {
+                            Image(systemName: "plus")
+                        }
+                        
+                        Button(action: {
+                            self.isShowPasswords = !self.isShowPasswords
+                        }) {
+                            Image(systemName: "eye")
+                        }
+                        .disabled(self.selectedPasswords.count == 0)
+                    }
              )
              .sheet(isPresented: $isShowAddPasswordView) {
                  AddPasswordView()
