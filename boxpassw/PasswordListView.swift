@@ -28,6 +28,19 @@ struct PasswordListView: View {
         }
     }
     
+    private func deletePassword(at offsets: IndexSet) {
+        for index in offsets {
+            let pass = passwords[index]
+            viewContext.delete(pass)
+        }
+        do {
+                   try viewContext.save()
+               } catch {
+                   let nsError = error as NSError
+                   fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+               }
+    }
+    
     var body: some View {
         NavigationView{
             VStack {
@@ -44,9 +57,7 @@ struct PasswordListView: View {
                             }
                         }
                     }
-                    .onDelete { indexSet in
-                        
-                    }
+                    .onDelete(perform: deletePassword)
                 }
                 
                 

@@ -22,7 +22,7 @@ struct AddPasswordView: View {
                 Section(header: Text("New Password")) {
                     TextField("Domain", text: $domain)
                     TextField("Username", text: $username)
-                    SecureField("Password", text: $password)
+                    TextField("Password", text: $password)
                 }
                 
                 Section {
