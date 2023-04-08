@@ -8,72 +8,23 @@
 import SwiftUI
 import CoreData
 
-/*
- @State private var isUnlocked = false
- var body: some View {
-         VStack {
-             Text("Boxpass 🔐")
-                 .font(.title)
-                 .bold()
-                 .padding()
-             
-             if isUnlocked {
-                 Text("Welcome to Boxpass!").font(.title)
-             } else {
-                 Button("Authenticate"){
-                     authenticate()
-                 }
-             }
-         }
-     }
- 
- func authenticate2() {
-     let authenticationContext = LAContext()
-     let reason = "Authentication required to access Boxpass"
-     
-     authenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-        DispatchQueue.main.async {
-            if success {
-                self.isUnlocked = true
-            }
-        }
-    }
- }
- 
- func authenticate() {
-     let context = LAContext()
-     var error: NSError?
-     
-     if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-         
-         context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "This is for security reasons") {
-             success, authenticateError in
-             
-             if success {
-                 self.isUnlocked = true
-             }
-         }
-         
-     }
- }
- */
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
+    
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \PasswordData.id, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var passwords: FetchedResults<PasswordData>
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
+                ForEach(passwords) { pass in
                     NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        Text("Item at \(pass.id!)")
                     } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                        Text(pass.domain!)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -94,8 +45,12 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newItem = PasswordData(context: viewContext)
+            newItem.id = UUID()
+            newItem.domain = "testeDomain"
+            newItem.username = "test-add"
+            newItem.password = "test-pass"
+            newItem.active = true
 
             do {
                 try viewContext.save()
@@ -110,7 +65,7 @@ struct ContentView: View {
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
+            offsets.map { passwords[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
@@ -123,13 +78,6 @@ struct ContentView: View {
         }
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
