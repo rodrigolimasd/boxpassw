@@ -23,7 +23,6 @@
 		5BEAAC2129E0C218001F852A /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEAAC2029E0C218001F852A /* SearchBarView.swift */; };
 		5BEAAC2329E0C9A0001F852A /* PasswordListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEAAC2229E0C9A0001F852A /* PasswordListRowView.swift */; };
 		5BEAAC2529E0C9C3001F852A /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEAAC2429E0C9C3001F852A /* Password.swift */; };
-		5BEAAC2729E0CB2C001F852A /* PasswordListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEAAC2629E0CB2C001F852A /* PasswordListViewModel.swift */; };
 		5BEAAC2929E0D3EA001F852A /* AddPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEAAC2829E0D3EA001F852A /* AddPasswordView.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +44,6 @@
 		5BEAAC2029E0C218001F852A /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		5BEAAC2229E0C9A0001F852A /* PasswordListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListRowView.swift; sourceTree = "<group>"; };
 		5BEAAC2429E0C9C3001F852A /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
-		5BEAAC2629E0CB2C001F852A /* PasswordListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListViewModel.swift; sourceTree = "<group>"; };
 		5BEAAC2829E0D3EA001F852A /* AddPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +94,6 @@
 				5BEAAC2029E0C218001F852A /* SearchBarView.swift */,
 				5BEAAC2229E0C9A0001F852A /* PasswordListRowView.swift */,
 				5BEAAC2429E0C9C3001F852A /* Password.swift */,
-				5BEAAC2629E0CB2C001F852A /* PasswordListViewModel.swift */,
 				5BEAAC2829E0D3EA001F852A /* AddPasswordView.swift */,
 			);
 			path = boxpassw;
@@ -195,7 +192,6 @@
 				5BAA01C429CCC3E9000C886A /* AuthenticationView.swift in Sources */,
 				5BEAAC1C29E0C01E001F852A /* PasswordListView.swift in Sources */,
 				5BEAAC2929E0D3EA001F852A /* AddPasswordView.swift in Sources */,
-				5BEAAC2729E0CB2C001F852A /* PasswordListViewModel.swift in Sources */,
 				5BAA01B029CCBA17000C886A /* ContentView.swift in Sources */,
 				5BAA01C629CCE994000C886A /* UserPassword.swift in Sources */,
 				5BAA01CD29CCF3D5000C886A /* LoadingView.swift in Sources */,

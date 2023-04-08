@@ -11,7 +11,7 @@ struct AddPasswordView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) private var viewContext
     
-    @State private var name = ""
+    @State private var domain = ""
     @State private var username = ""
     @State private var password = ""
     @State private var active = true
@@ -20,7 +20,7 @@ struct AddPasswordView: View {
         NavigationView {
             Form {
                 Section(header: Text("New Password")) {
-                    TextField("Name", text: $name)
+                    TextField("Domain", text: $domain)
                     TextField("Username", text: $username)
                     SecureField("Password", text: $password)
                 }
@@ -36,8 +36,12 @@ struct AddPasswordView: View {
                 },
             trailing:
                     Button("Save") {
-                        let newPassword = Password
-                            .create(name: name, username: username, _password: password, active: active)
+                        let newItem = PasswordData(context: viewContext)
+                        newItem.id = UUID()
+                        newItem.domain = self.domain
+                        newItem.username = self.username
+                        newItem.password = self.password
+                        newItem.active = self.active
                         
                         do {
                             try viewContext.save()

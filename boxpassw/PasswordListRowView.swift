@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct PasswordListRowView: View {
-    var password: Password
+    var password: PasswordData
     var isSelected: Bool
     var onSelect: (() -> Void)?
     
     var body: some View {
         HStack {
-            Text(password.name)
+            Text(password.domain!)
                 .font(.headline)
                 .foregroundColor(.primary)
             Spacer()
@@ -28,6 +28,16 @@ struct PasswordListRowView: View {
 
 //struct PasswordListRowView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        PasswordListRowView()
+//        PasswordListRowView(password: getPasswordData(), isSelected: true)
+//        {
+//
+//        }
+//    }
+//    private static func getPasswordData() -> PasswordData {
+//        let pass = PasswordData()
+//        pass.domain = "domain-test"
+//        return pass
 //    }
 //}
+
+
